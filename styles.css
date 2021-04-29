@@ -1,0 +1,158 @@
+@font-face {
+  font-family: "Sohne-Normal";
+  src: url(./font/sohne-normal.otf);
+}
+@font-face {
+  font-family: "Sohne-Bold";
+  src: url(./font/sohne-bold.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Sohne-Bold", sans-serif;
+  background-image: linear-gradient(
+    120deg,
+    rgba(142, 45, 253, 1) 0%,
+    rgba(34, 193, 195, 1) 100%
+  );
+  min-height: 100vh;
+  color: white;
+}
+
+header {
+  font-size: 1.2rem;
+}
+
+header,
+form {
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.3rem;
+  font-size: 1.75rem;
+  border: none;
+  background: white;
+}
+form input {
+  font-family: "Monaco", sans-serif;
+  font-size: 1.7rem;
+}
+/* form button {
+  font-size: 2.13rem;
+} */
+
+form button {
+  color: rgba(142, 45, 253, 1);
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: rgba(142, 45, 253, 1);
+  color: white;
+  cursor: pointer;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  width: 25%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+  font-family: "Space mono";
+  padding: 0.3rem 0.5rem;
+}
+
+.trash-btn,
+.complete-btn {
+  padding: 1rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.trash-btn {
+  background: rgb(44, 171, 173);
+}
+
+.complete-btn {
+  background: rgb(142, 66, 230);
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  width: 10rem;
+  cursor: pointer;
+  padding: 0.85rem;
+  font-family: "Space Mono", sans-serif;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: rgba(142, 45, 253, 1);
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.select:hover::after {
+  background: white;
+  color: rgba(142, 45, 253, 1);
+}
